@@ -1,2 +1,2 @@
 # connect-four
-Connect Four
+# connect-four

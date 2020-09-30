@@ -1,0 +1,51 @@
+Initial thoughts on a general plan:
+
+Split into 2 phases.
+
+Part 1: Get a general board working with the CPU placing randomly.
+
+
+What kind of data are we working with?
+*State of each board location
+
+Storing Data
+*I'm thinking ints stored in a multidimensional array (considering flattening later).
+
+Manipulating Data
+*Checking for wins
+	There are 3 types of valid sequences - horizontal, vertical, diagonal.
+	That means for each piece on the board we can run 3 algorithms to check for sequences
+	Flatten this array to make the math simpler (for example, to check for diagonal sequences we count the number of n's we reach at currentPiece+8n).
+
+Visuals
+*HTML. We can represent the game board as an HTML table.
+*Basic CSS. Color cell the proper color.
+
+
+Part 2: Get some real AI going.
+
+There is a win (Check for game over (no more moves, red wins, yellow wins))?
+	exit
+
+It is human's Turn
+	Wait
+
+It is CPU's Turn
+	AI is smart:
+		There is a threat from human (sequence of two or more) that hasn't been headed off?
+			Calculate which spots will give human the next step towards winning.
+
+		There is no threat from human, or existing "threats" have been headed off.
+			CPU has at least one sequence started?
+				Pick the longest available and add do it.
+			CPU has no sequence started?
+				Is the center spot taken?
+					Take it!!!
+				Are either of the spots next to the center taken?
+					Are both open?
+						Take one randomly
+
+	AI is dumb:
+
+
+I'll revisit this later.

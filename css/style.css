@@ -1,0 +1,44 @@
+div#gameBoardContainer, table#gameBoard{
+	display: block;
+	clear: both;
+	float: none;
+	overflow: auto;
+}
+
+div#gameBoardContainer {
+    margin: 50px auto;
+    overflow: hidden;
+    width: 359px;
+}
+
+table#gameBoard{
+}
+
+table#gameBoard tr td {
+	border: 1px solid black;
+	background: #dfdfdf;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+table#gameBoard tr td.player_1, table#gameBoard tr td.player_0 {
+	/*cursor: default;*/
+}
+
+table#gameBoard tr td.player_1 {
+	background: red;
+}
+
+table#gameBoard tr td.player_0 {
+	background: yellow;
+}
+
+
+div#gameBoardContainer div.restart {
+	float: left;
+}
+
+div#gameBoardContainer div.ai-level {
+	float: right;
+}
